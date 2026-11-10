@@ -1,0 +1,19 @@
+Data dictionary — ranking_dataset_batters.csv / ranking_dataset_bowlers.csv
+One row per player with any IPL/T20I batting (or bowling) in the supplied data (innings 1-2, IPL + T20I only).
+player_id / player_name ........ IDs and exact display names from competition_team_player_mapping.csv
+eligible ....................... meets fixed eligibility thresholds (see report s.8/9)
+final_rank ..................... rank by pressure_score_ensemble among eligible players (1 = best)
+pressure_score_ensemble ........ mean 0-100 composite score over 18 model specifications (THE ranking score)
+pressure_score_primary_spec .... 0-100 score under the primary spec (PI_main, 75th pct, 70:30)
+pressure_value_per100 .......... shrunk posterior RAA (bat) / RSAA (bowl) per 100 pressure balls
+normal_value_per100 ............ shrunk value per 100 normal-pressure balls (own baseline)
+pressure_minus_normal_per100 ... difference of the two
+lower_bound_per_ball ........... posterior 10th percentile of pressure value (per ball)
+*_pressure_balls / *_matches ... sample sizes (pressure = Pressure Index >= 75)
+bootstrap_* .................... 300 match-level Poisson bootstrap replicates (eligible only)
+share_of_18_specs_in_top10 ..... robustness across pressure spec x threshold x IPL:T20I weight
+rank_thr65 / rank_thr85 / rank_blend60_40 / rank_blend80_20 / rank_alt_pressure_index ... ranks under alternative specs
+*_ae_per_ball .................. per-ball value above context expectation (shrunk)
+pressure_SR / pressure_economy etc. ... raw descriptive statistics on pressure balls; expected_* = average-player expectation on the same balls
+last5 / difficult_chase (D>1.2) / wickets_falling (wicket in last 18 legal balls) / death / defending (2nd inns) splits are raw, pressure balls only
+ipl2026_team_in_data ........... team in the IPL 2026 competition mapping (blank = no IPL 2026 record)
