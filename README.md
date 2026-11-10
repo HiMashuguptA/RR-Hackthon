@@ -1,6 +1,6 @@
 # SupeRR Selector Season 2 — Round 1: Most Reliable Players Under Pressure
 
-**Live dashboard:** https://himashugupta.github.io/RR-Hackthon/
+**Live dashboard:** https://rr-superr-selector-dashboard.vercel.app
 
 Rajasthan Royals × Unstop. Rankings of the 10 most reliable batters and bowlers under pressure, computed from the supplied IPL & T20I ball-by-ball data (2022–2026; 837 matches, 193,988 deliveries).
 
